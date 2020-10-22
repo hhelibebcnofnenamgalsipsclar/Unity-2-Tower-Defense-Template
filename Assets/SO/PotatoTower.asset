@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc98d3f84ad0438e807be03b7b26247, type: 3}
   m_Name: PotatoTower
   m_EditorClassIdentifier: 
-  TowerName: 
-  cost: 0
-  health: 0
-  attackCooldown: 0
-  color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  sprite: {fileID: 0}
-  attackRange: 0
+  TowerName: Potato Tower
+  cost: 30
+  health: 1
+  attackCooldown: 0.3
+  color: {r: 0.6435617, g: 0.9716981, b: 0.5445176, a: 1}
+  sprite: {fileID: 21300000, guid: f6bfac13df8fa422281fd5dee4235052, type: 3}
+  attackRange: 0.2
+  projectile: {fileID: 11400000, guid: e6eed74d6a6460042b5fe244b76c08cb, type: 2}

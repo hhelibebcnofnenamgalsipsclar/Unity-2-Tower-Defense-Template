@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbc98d3f84ad0438e807be03b7b26247, type: 3}
-  m_Name: PotatoRailgun
+  m_Name: PotatoShield
   m_EditorClassIdentifier: 
-  TowerName: Potato Railgun
-  cost: 1000
-  health: 500
-  attackCooldown: 0.8
-  color: {r: 1, g: 0.8565774, b: 0.12641507, a: 1}
+  TowerName: Potato armor
+  cost: 10
+  health: 1000
+  attackCooldown: 1
+  color: {r: 0.8207547, g: 0.57465327, b: 0, a: 1}
   sprite: {fileID: 21300000, guid: ee78cffc7eeeb482ca81f20814a338c5, type: 3}
-  attackRange: 0.7
-  projectile: {fileID: 11400000, guid: 6e433d90c51d1624fae391601e15bb81, type: 2}
+  attackRange: 1

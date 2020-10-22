@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HeavyEnemy
   m_EditorClassIdentifier: 
   name: Heavy
-  health: 120
+  health: 500
   speed: 1
   rotRate: 1
   damage: 100
