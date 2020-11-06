@@ -30,7 +30,8 @@ public class TowerManager : MonoBehaviour
     {
         if (currentTarget != null)
         {
-            AttackTarget();
+            //AttackTarget();
+            anim.SetFloat("rangeToTarget",Vector3.Distance(this.transform.position,currentTarget.transform.position));
         }
         else
         {
@@ -72,6 +73,7 @@ public class TowerManager : MonoBehaviour
         {
             if (currentTarget != null)
             {
+                 anim.SetFloat("rangeToTarget",Vector3.Distance(this.transform.position,currentTarget.transform.position));
                 anim.SetBool("hasTarget", true);
             }
             else
@@ -94,7 +96,7 @@ public class TowerManager : MonoBehaviour
         return rot;
     }
 
-    void AttackTarget()
+    public void AttackTarget()
     {
         Debug.DrawLine(this.transform.position, currentTarget.transform.position);
         if (readyToFire && GetDis() <= self.attackRange)
@@ -117,6 +119,7 @@ public class TowerManager : MonoBehaviour
         GameObject shotProjectile = CreateProjectile();
         shotProjectile.GetComponent<ProjectileManager>().self = self.projectile;
         shotProjectile.GetComponent<ProjectileManager>().target = currentTarget;
+        shotProjectile.transform.parent = this.transform.parent;
         readyToFire = false;
         yield return new WaitForSeconds(self.attackCooldown);
         readyToFire = true;

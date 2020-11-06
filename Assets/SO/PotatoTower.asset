@@ -15,8 +15,8 @@ MonoBehaviour:
   TowerName: Potato Tower
   cost: 30
   health: 1
-  attackCooldown: 0.3
+  attackCooldown: 0.000001
   color: {r: 0.6435617, g: 0.9716981, b: 0.5445176, a: 1}
   sprite: {fileID: 21300000, guid: f6bfac13df8fa422281fd5dee4235052, type: 3}
-  attackRange: 100
+  attackRange: 8
   projectile: {fileID: 11400000, guid: e6eed74d6a6460042b5fe244b76c08cb, type: 2}
