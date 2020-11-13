@@ -11,9 +11,9 @@ public class AttackAtRange : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         tm = animator.GetComponent<TowerManager>();
-        animator.speed = tm.self.attackRate;
+        animator.speed = tm.self.attackRange;
     }
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(tm.currentTarget != null)
         {
@@ -24,6 +24,10 @@ public class AttackAtRange : StateMachineBehaviour
             animator.SetBool("hasTarget", false);
         }    
 
+    }
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        animator.speed = 1;
     }
     void Start()
     {
